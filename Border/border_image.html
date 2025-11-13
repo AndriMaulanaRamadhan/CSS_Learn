@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#borderimg1 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(../images/border.png) 100 round;
+}
+
+#borderimg2 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(../images/border.png) 100 stretch;
+}
+</style>
+</head>
+<body>
+
+<h1>The border-image Property</h1>
+<p>The border-image property specifies an image to be used as the border around an element:</p>
+
+<p id="borderimg1">Here, the image tiles to fill the area. The image is rescaled if necessary, to avoid dividing tiles.</p>
+<p id="borderimg2">Here, the image is stretched to fill the area.</p>
+
+<p>Here is the original image:</p>
+<img src="../images/border.png" alt="Border Image">
+
+</body>
+</html>
