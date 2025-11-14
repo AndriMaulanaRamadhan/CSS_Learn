@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div { 
+  width: 55px;
+  border: 1px solid black;
+}
+ 
+div.a {
+  hyphens: none;
+}
+
+div.b {
+  hyphens: manual;
+}
+
+div.c {
+  hyphens: auto;
+}
+</style>
+</head>
+<body>
+
+<h1>The hyphens Property</h1>
+
+<h2>hyphens: none</h2>
+<p>No hyphen; overflow if needed.</p>
+<div class="a">A veryvery­very long word.</div>
+
+<h2>hyphens: manual</h2>
+<p>Hyphen only at &hyphen; or &shy; (if needed).</p>
+<div class="b">A veryvery­very long word.</div>
+
+<h2>hyphens: auto</h2>
+<p>Hyphen where the algorithm is deciding (if needed).</p>
+<div class="c">A veryvery­very long word.</div>
+
+</body>
+</html>

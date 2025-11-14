@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div { 
+  width: 50px;
+  border: 1px solid black;
+  hypens: auto;
+}
+ 
+div.a {
+  hyphenate-character: auto;
+}
+
+div.b {
+  hyphenate-character: "=";
+}
+
+div.c {
+  hyphenate-character: "/";
+}
+
+div.d {
+  hyphenate-character: "_";
+}
+</style>
+</head>
+<body>
+
+<h1>The hyphenate-character Property</h1>
+
+<h2>hyphenate-character: auto</h2>
+<div class="a">A veryvery­very long word.</div>
+
+<h2>hyphenate-character: "="</h2>
+<div class="b">A veryvery­very long word.</div>
+
+<h2>hyphenate-character: "/"</h2>
+<div class="c">A veryvery­very long word.</div>
+
+<h2>hyphenate-character: "_"</h2>
+<div class="d">A veryvery­very long word.</div>
+
+</body>
+</html>
