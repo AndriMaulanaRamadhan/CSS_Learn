@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Bungee+Spice);
+
+h2 {
+  font-family: "Bungee Spice";
+  font-size: 30px;
+}
+
+@font-palette-values --greenAndYellow {
+  font-family: "Bungee Spice";
+  override-colors: 0 yellow, 1 green;
+}
+
+@font-palette-values --pinkAndGray {
+  font-family: "Bungee Spice";
+  override-colors: 0 hotpink, 1 gray;
+}
+
+.alt1 {
+  font-palette: --greenAndYellow;
+}
+
+.alt2 {
+  font-palette: --pinkAndGray;
+}
+</style>
+</head>
+<body>
+
+<h1>Demo of @font-palette-values</h1>
+
+<h2>Default colors in palette</h2>
+
+<h2 class="alt1">Alternate colors</h2>
+
+<h2 class="alt2">Alternate colors</h2>
+
+</body>
+</html>
