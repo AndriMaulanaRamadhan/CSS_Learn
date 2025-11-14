@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.normal::first-letter {
+  -webkit-initial-letter: normal;
+  initial-letter: normal;
+}
+
+.two::first-letter {
+  -webkit-initial-letter: 2;
+  initial-letter: 2; /* Initial letter occupies 2 lines */
+}
+
+.four::first-letter {
+  -webkit-initial-letter: 4;
+  initial-letter: 4; /* Initial letter occupies 4 lines */
+}
+
+.four2::first-letter {
+  -webkit-initial-letter: 4 2;
+  initial-letter: 4 2; /* Initial letter occupies 4 lines and sinks 2 lines */
+}
+</style>
+</head>
+<body>
+
+<h1>The initial-letter Property</h1>
+
+
+<h2>initial-letter: normal;</h2>
+<p class="normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo dui vitae libero consequat iaculis. Pellentesque lectus ex, malesuada id fermentum in, lobortis a lorem. Sed a dui quis ipsum pretium euismod non vitae felis. Nunc commodo ante nisl, et egestas mauris consequat et.</p>
+
+<h2>initial-letter: 2;</h2>
+<p class="two">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo dui vitae libero consequat iaculis. Pellentesque lectus ex, malesuada id fermentum in, lobortis a lorem. Sed a dui quis ipsum pretium euismod non vitae felis. Nunc commodo ante nisl, et egestas mauris consequat et.</p>
+
+<h2>initial-letter: 4;</h2>
+<p class="four">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo dui vitae libero consequat iaculis. Pellentesque lectus ex, malesuada id fermentum in, lobortis a lorem. Sed a dui quis ipsum pretium euismod non vitae felis. Nunc commodo ante nisl, et egestas mauris consequat et.</p>
+
+<h2>initial-letter: 4 2;</h2>
+<p class="four2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo dui vitae libero consequat iaculis. Pellentesque lectus ex, malesuada id fermentum in, lobortis a lorem. Sed a dui quis ipsum pretium euismod non vitae felis. Nunc commodo ante nisl, et egestas mauris consequat et.</p>
+
+</body>
+</html>
