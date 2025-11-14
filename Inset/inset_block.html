@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#parentDIV {
+  position: relative;
+  height: 250px;
+  width: 60%;
+}
+
+#myDIV {
+  position: absolute;
+  background-color: lightblue;
+  inset-block: 10px 50px;
+}
+
+div {
+  border: solid black 1px;
+}
+</style>
+</head>
+<body>
+
+<h1>The inset-block Property</h1>
+
+<div id="parentDIV">
+  <div id="myDIV">
+    <p>This DIV has a size defined by the distance of 10 pixels to the parent DIV element from start of block, and 50 pixels distance to parent from end of block.</p>
+  </div>
+</div>
+
+</body>
+</html>
