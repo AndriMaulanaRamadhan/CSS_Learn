@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  /* Set "my-counter" to 5 */
+  counter-set: my-counter 5;
+}
+
+h2::before {
+  /* Increment "my-counter" by 1 */
+  counter-increment: my-counter;
+  content: "Section " counter(my-counter) ". ";
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+<h2>Bootstrap Tutorial</h2>
+<h2>SQL Tutorial</h2>
+<h2>PHP Tutorial</h2>
+
+</body>
+</html>

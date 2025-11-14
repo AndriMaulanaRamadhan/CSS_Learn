@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.parent {
+  width: 200px;
+  container-name: myContainer;
+  container-type: inline-size;
+}
+
+/* Add styles if myContainer is less than 500px wide */
+@container myContainer (width < 500px) {
+  .child {
+    width: 50%;
+    border: 2px solid maroon;    
+    background-color: salmon;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Demo of @container</h1>
+
+<p>Resize the page to see the effect.</p>
+
+<div class="parent">
+  <div class="child">
+    <h2>A header</h2>
+    <p>Some text.</p>
+  </div>
+</div>
+
+</body>
+</html>
