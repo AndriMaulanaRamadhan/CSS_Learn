@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  width: 140px; 
+  border: 1px solid #000000;
+}
+
+p.a {
+  word-break: normal;
+}
+
+p.b {
+  word-break: keep-all;
+}
+
+p.c {
+  word-break: break-all;
+}
+</style>
+</head>
+<body>
+
+<h1>The word-break Property</h1>
+
+<h2>word-break: normal (default):</h2>
+<p class="a">Thisissomeveryveryverylong word. Words will break according to usual rules.</p>
+
+<h2>word-break: keep-all:</h2>
+<p class="b">Thisissomeveryveryverylong word. This text will-break-at-hyphens.</p>
+
+<h2>word-break: break-all:</h2>
+<p class="c">Thisissomeveryveryverylong word. This text will break at any character.</p>
+
+</body>
+</html>
