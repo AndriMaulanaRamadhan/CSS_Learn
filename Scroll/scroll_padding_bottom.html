@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 80%;
+  aspect-ratio: 3/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-bottom: 20px;
+}
+
+.blue {
+  background-color: lightblue;
+  width: 95%;
+  aspect-ratio: 3/1;
+}
+
+.green {
+  background-color: lightgreen;
+  width: 80%;
+  aspect-ratio: 4/1;
+}
+
+.blue, .green {
+  margin: 2px;
+  scroll-snap-align: end;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-padding-bottom property.</h3>
+<p>Scroll-padding-bottom property is set on the container, so that the snap position of child elements is offset by a distance to the bottom of the container.</p>
+<p>In this case, snap position is set to end in y direction, so the element in focus should snap into place at the very end of the container. But instead, because of the scroll-padding-bottom value, the element in focus is offset by a 20px distance from the bottom of the container to the child element.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>

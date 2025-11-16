@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 80%;
+  aspect-ratio: 2/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+}
+
+.blue {
+  background-color: lightblue;
+  height: 95%;
+  aspect-ratio: 3/2;
+}
+
+.green {
+  background-color: lightgreen;
+  height: 80%;
+  aspect-ratio: 4/3;
+}
+
+.blue, .green {
+  display: inline-block;
+  margin: 2px;
+  scroll-snap-align: start;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-padding-left property.</h3>
+<p>Scroll-padding-left property is set on the container, so that the snap position of child elements is offset by a distance to the left of the container.</p>
+<p>In this case, snap position is set to start in x direction, so the element in focus should snap into place at the very left of the container. But instead, because of the scroll-padding-left value, the element in focus is offset by a 20px distance from the left side of the container to the child element.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>

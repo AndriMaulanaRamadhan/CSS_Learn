@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 80%;
+  aspect-ratio: 3/1;
+  padding: 40px 0;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.blue {
+  background-color: lightblue;
+  width: 95%;
+  aspect-ratio: 3/1;
+}
+
+.green {
+  background-color: lightgreen;
+  width: 80%;
+  aspect-ratio: 4/1;
+}
+
+.blue, .green {
+  margin: 2px;
+  scroll-snap-align: start none;
+  scroll-margin-block-start: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-margin-block-start property.</h3>
+<p>Scroll-margin-block-start property is set on the child elements inside the container, so that snap position is offset by a margin inside the container in the block direction.</p>
+<p>In this case, snap position is set to start in block direction, so the element in focus should snap into place at the very top of the container. But instead, because of the scroll-margin-block-start value, the element in focus is offset by 20px margin between child element and container.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>

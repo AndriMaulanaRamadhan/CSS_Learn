@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 80%;
+  aspect-ratio: 2/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.blue {
+  background-color: lightblue;
+  height: 95%;
+  aspect-ratio: 1/2;
+}
+
+.green {
+  background-color: lightgreen;
+  height: 50%;
+  aspect-ratio: 2/1;
+}
+
+.blue, .green {
+  display: inline-block;
+  margin: 5px;
+  scroll-snap-align: center;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-snap-align property.</h3>
+<p>Scroll-snap-align property is set on scrollable child elements inside the container, to snap on center position.</p>
+<p>Drag the scrollbar horizontally inside the container box, let go, and see the scroll-snap-align center effect.</p>
+<p>Click on a box, then navigate through the blue and green boxes with the left and right arrow keys.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>

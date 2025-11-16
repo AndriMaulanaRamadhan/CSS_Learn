@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 60%;
+  aspect-ratio: 3/2;
+  padding: 0 40px;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline-start: 20px;
+}
+
+.blue {
+  background-color: lightblue;
+  height: 95%;
+  aspect-ratio: 5/3;
+}
+
+.green {
+  background-color: lightgreen;
+  height: 80%;
+  aspect-ratio: 5/4;
+}
+
+.blue, .green {
+  display: inline-block;
+  margin: 2px;
+  scroll-snap-align: none start;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-padding-inline-start property.</h3>
+<p>Scroll-padding-inline-start property is set on the container element, so that snap position on child elements is offset by a distance from the start of the container in the inline direction.</p>
+<p>In this case, snap position is set to start in the inline direction, so the element in focus should snap into place at the very left of the container. But instead, because of the scroll-padding-inline-start value, the element in focus is offset by 20px distance from the container to the child element.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>

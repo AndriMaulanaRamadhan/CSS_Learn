@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 80%;
+  aspect-ratio: 2/1;
+  padding: 0 50px;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.blue {
+  background-color: lightblue;
+  height: 95%;
+  aspect-ratio: 1/1;
+}
+
+.green {
+  background-color: lightgreen;
+  height: 80%;
+  aspect-ratio: 1/2;
+}
+
+.blue, .green {
+  display: inline-block;
+  margin: 2px;
+  scroll-snap-align: none start;
+  scroll-margin-inline: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-margin-inline property.</h3>
+<p>Scroll-margin-inline property is set on the child elements inside the container, so that snap position is offset by a margin inside the container in the inline direction.</p>
+<p>In this case, snap position is set to start in inline direction, so the element in focus should snap into place at the very left of the container. But instead, because of the scroll-margin-inline value, the element in focus is offset by a 20px distance between child element and container.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  width: 80%;
+  aspect-ratio: 2/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.blue {
+  background-color: lightblue;
+  width: 90%;
+}
+
+.green {
+  background-color: lightgreen;
+  width: 80%;
+}
+
+.pink {
+  background-color: lightpink;
+  width: 70%;
+}
+
+#container > div{
+  margin: 5px;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  aspect-ratio: 4/1;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-snap-stop property.</h3>
+<p>To see the effect from scroll-snap-stop property, basic scroll snap behaviour must first be established: Scroll-snap-align property is set on child elements to snap on center position, and scroll-snap-type property is set on container to snap vertically.</p>
+<p>Now, with scroll-snap-stop property set to always on child elements, scrolling past the next element is prevented when swiping fast with a trackpad or a touch screen.</p>
+<p>You need to use a trackpad or a touch screen to see this effect.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="pink"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="pink"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="pink"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+</div>
+
+</body>
+</html>

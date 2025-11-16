@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container {
+  position: relative;
+  width: 80%;
+  aspect-ratio: 2/1;
+  margin: auto;
+  border: solid black 2px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.blue {
+  background-color: lightblue;
+  height: 95%;
+  aspect-ratio: 4/3;
+}
+
+.green {
+  background-color: lightgreen;
+  height: 80%;
+  aspect-ratio: 3/2;
+}
+
+.blue, .green {
+  margin: 2px;
+  display: inline-block;
+  scroll-snap-align: start;
+  scroll-margin-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>CSS scroll-margin-left property.</h3>
+<p>Scroll-margin-left property is set on the child elements, so that snap position on the left side is offset by a distance to the container.</p>
+
+<div id="container">
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+  <div class="green"></div>
+  <div class="blue"></div>
+</div>
+
+</body>
+</html>
