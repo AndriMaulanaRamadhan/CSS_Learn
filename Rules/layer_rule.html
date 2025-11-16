@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/* layer 1 */
+@layer {
+  body {
+    background: pink;
+  }
+}
+
+/* layer 2 */
+@layer {
+  body {
+    background: lightblue; /* last layer wins */
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>The @layer Rule</h1>
+
+</body>
+</html>

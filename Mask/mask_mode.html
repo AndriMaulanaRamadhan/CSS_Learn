@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.mask1 {
+  -webkit-mask-image: url(../images/Ry_Learn.png);
+  mask-image: url(../images/Ry_Learn.png);
+  mask-size: 30%;
+  mask-repeat: no-repeat;
+  mask-mode: luminance;
+}
+
+.mask2 {
+  -webkit-mask-image: url(../images/Ry_Learn.png);
+  mask-image: url(../images/Ry_Learn.png);
+  mask-size: 30%;
+  mask-repeat: no-repeat;
+  mask-mode: alpha;
+}
+</style>
+</head>
+<body>
+
+<h1>The mask-mode Property</h1>
+
+<h3>Let the mask layer image be treated as a luminance mask:</h3>
+<div class="mask1">
+<img src="../images/city.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Let the mask layer image be treated as an alpha mask:</h3>
+<div class="mask2">
+<img src="../images/city.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Original image:</h3>
+<img src="../images/city.jpg" alt="Cinque Terre" width="600" height="400">
+
+</body>
+</html>

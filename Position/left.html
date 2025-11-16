@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.a {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid red;
+}
+
+div.b {
+  position: absolute;
+  left: auto;
+  width: 100px;
+  height: 120px;
+  border: 3px solid blue;
+} 
+
+div.c {
+  position: absolute;
+  left: 150px;
+  width: 200px;
+  height: 120px;
+  border: 3px solid green;
+} 
+</style>
+</head>
+<body>
+
+<h1>The left Property</h1>
+
+<div class="a">This div element has position: relative;
+  <div class="b">This div element has position: absolute and left: auto.</div>
+  <div class="c">This div element has position: absolute and is placed 150 pixels to the right of the LEFT edge of the containing positioned element.</div>
+</div>
+
+</body>
+</html>

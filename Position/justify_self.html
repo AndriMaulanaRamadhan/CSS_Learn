@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#container {
+  width: 70%;
+  aspect-ratio: 2/1;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#container > div {
+  border: 1px solid black;
+}
+
+.blue {
+  background-color: lightblue;
+  width: 60%;
+  justify-self: right;
+}
+
+.red {
+  background-color: coral;
+  width: 80%;
+}
+
+.green {
+  background-color: lightgreen;
+  width: 70%;
+}
+</style>
+</head>
+<body>
+
+<h2>justify-self: right</h2>
+
+<p>All grid items are aligned to the left by default, except for the blue grid item with justify-self property value 'right'.</p>
+
+<div id="container">
+  <div class="red">RED</div>
+  <div class="blue">BLUE<br>justify-self: right</div>  
+  <div class="green">GREEN</div>
+  <div class="red">RED</div>
+  <div class="green">GREEN</div>
+  <div class="red">RED</div>
+  <div class="green">GREEN</div>
+  <div class="red">RED</div>
+  <div class="green">GREEN</div>
+</div>
+
+</body>
+</html>

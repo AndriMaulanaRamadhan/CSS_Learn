@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.masked {
+  background: green;
+  border: 30px solid blue;
+  padding: 20px;
+  -webkit-mask-image: url(img_circle.svg);
+  mask-image: url(img_circle.svg);
+  mask-size: 50%;
+  mask-repeat: no-repeat;    
+}
+
+.mask1 {
+  mask-origin: border-box;  
+}
+
+.mask2 {
+  mask-origin: content-box;  
+}
+
+.mask3 {
+  mask-origin: padding-box;  
+}
+
+.mask4 {
+  mask-origin: fill-box;  
+}
+</style>
+</head>
+<body>
+
+<h1>The mask-origin Property</h1>
+
+<h3>Set mask-origin: border-box:</h3>
+<div class="masked mask1">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Set mask-origin: content-box:</h3>
+<div class="masked mask2">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Set mask-origin: padding-box:</h3>
+<div class="masked mask3">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Set mask-origin: fill-box:</h3>
+<div class="masked mask4">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+</div>
+
+<h3>Original image:</h3>
+<img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+
+</body>
+</html>
