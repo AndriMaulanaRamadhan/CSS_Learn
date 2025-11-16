@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #frameDiv {
+    width: 400px;
+    height: 170px;
+    margin: 20px;
+    position: relative;
+    border: solid black 1px;
+    background-color: rgb(205, 242, 205);
+  }
+
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    offset: path('M 50 80 C 150 -20 250 180 350 80') 150px auto 45deg;
+    animation: moveImg 4s 1s 3;
+  }
+
+  svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  @keyframes moveImg {
+    100%  { offset-distance: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<h1>The offset property</h1>
+
+<div id="frameDiv">
+  <img src="img_fish.svg" alt="fish">
+  <svg fill="none" stroke="gray" stroke-width="2" stroke-dasharray="5,5">
+    <path d="M 50 80 C 150 -20 250 180 350 80" />
+  </svg>
+</div>
+
+<p>Here, the offset shorthand property is used to define property values for offset-path, offset-distance and offset-rotate. The fish starts moving at a 150px distance from the start of the path, and 45 degrees is added to its default rotation.</p>
+
+</body>
+</html>

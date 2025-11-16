@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  margin: 5px 15px;
+  padding: 3px;
+  border: solid black 1px;
+  overflow: auto;
+}
+
+#flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(197, 255, 236);
+  height: 300px;
+}
+
+#flex-container > div {
+  flex: 1;
+  height: 150px;
+}
+
+#pinkDiv {
+  background-color: rgb(255, 205, 213);
+}
+
+#yellowDiv {
+  background-color: rgb(255, 255, 161);
+  overscroll-behavior-block: contain;
+}
+</style>
+</head>
+<body>
+
+<h1>Try right box with no overscroll chaining in the block direction</h1>
+
+<p>Put the mouse pointer over the left pink box, scroll down to the bottom of it, continue scrolling, and the scrolling behavior will transfer to the green parent element. This is called overscroll chaining, when overscrolling in one element leads to scrolling behavior in the parent element. Scroll chaining is default behavior.</p>
+
+<p><strong>Note: </strong>You might need to move the mouse pointer a little bit inside the pink box after scrolling down to transfer scrolling behavior to the green parent element.</p>
+
+<p>Now, scroll to the top again, move mouse pointer over to the yellow box to the right, scroll down to the bottom of it, continue scrolling, and you will see that scrolling is NOT transferred to the parent element in this case, bacause of the overscroll-behavior-block property value 'contain' that prevents this from happening.</p>
+
+<div id="flex-container">
+  <div id="pinkDiv">
+    <h2>With overscroll chaining</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+  </div>
+  
+  <div id="yellowDiv">
+    <h2>No overscroll chaining</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+  </div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+</div>
+
+</body>
+</html>

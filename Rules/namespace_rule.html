@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@namespace url(http://www.w3.org/1999/xhtml); /* default namespace */
+@namespace svg url(http://www.w3.org/2000/svg); /* prefixed namespace */
+
+/* matches all XHTML <a> elements (since XHTML is the default namespace */
+a {
+  color: salmon;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* matches all SVG <a> elements */
+svg|a {
+  fill: maroon;
+  text-decoration: underline;
+}
+
+/* matches both XHTML and SVG <a> elements */
+*|a {
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<h1>Demo of @namespace</h1>
+
+<p>
+  <a href="#">An XHTML link</a>
+</p>
+
+<svg width="250px" xmlns="http://www.w3.org/2000/svg">
+  <a href="#">
+    <text x="0" y="15">An SVG link</text>
+  </a>
+</svg>
+
+</body>
+</html>

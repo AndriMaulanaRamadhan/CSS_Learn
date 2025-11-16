@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#container, #pinkDiv, #yellowDiv {
+  margin: 5px 15px;
+  padding: 3px;
+  border: solid black 1px;
+  overflow: auto;
+}
+
+#container {
+  background-color: rgb(197, 255, 236);
+  height: 370px;
+}
+
+#container p {
+  width: 200%;
+}
+
+#leftDiv {
+  float: left;
+  width: 60%;
+}
+
+#pinkDiv, #yellowDiv {
+  height: 150px;
+  width: 80%;
+}
+
+#pinkDiv {
+  background-color: rgb(255, 205, 213);
+}
+
+#yellowDiv {
+  background-color: rgb(255, 255, 161);
+  overscroll-behavior-inline: contain;
+}
+</style>
+</head>
+<body>
+
+<h1>Try yellow box with no overscroll chaining in the inline direction</h1>
+
+<p>Put the mouse pointer over the pink box, scroll right to the end of it, continue scrolling, and the scrolling behavior will transfer to the green parent element. This is called overscroll chaining, when overscrolling on one element leads to scrolling behavior on the parent element. Scroll chaining is default behavior.</p>
+
+<p><strong>Note: </strong>To scroll sideways to trigger overscroll-behavior in the inline direction, you might need to use swipe-gesture on a touchpad or a touchscreen.</p>
+
+<p>Now, scroll to the left again, move mouse pointer over to the yellow box, scroll right to the end of it, continue scrolling, and you will see that scrolling is NOT transferred to the parent element in this case, bacause of the overscroll-behavior-inline property value 'contain' that prevents this from happening.</p>
+
+<div id="container">
+
+  <div id="leftDiv">
+    <div id="pinkDiv">
+      <h2>With overscroll chaining in the inline-direction</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+    </div>
+    <div id="yellowDiv">
+      <h2>No overscroll chaining in the inline-direction</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+    </div>
+  </div>
+  
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consequat leo eu odio feugiat luctus. Duis vel sagittis ipsum, non dictum nisl. Vivamus sit amet volutpat metus. Nunc tempus, mi ut vehicula porttitor, velit lacus sagittis lorem, sit amet venenatis mauris nibh sit amet urna. Nam nibh mi, commodo id diam eu, congue suscipit nunc. Vestibulum scelerisque dui tempus tincidunt luctus. Donec placerat quis neque vel ultrices. Pellentesque dignissim placerat orci sed cursus. Ut convallis leo sapien, vitae ornare nulla sodales at. Suspendisse ut vestibulum erat. Sed ut fermentum tortor. Integer quis tellus eget nisi pharetra pharetra non vitae magna. Cras ultricies, nulla id imperdiet varius, nisi odio finibus diam, at finibus lacus risus vel dui. Ut euismod consequat libero eu pharetra.</p>
+</div>
+
+</body>
+</html>

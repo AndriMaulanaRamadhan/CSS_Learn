@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #frameDiv {
+    width: 400px;
+    height: 180px;
+    margin: 20px;
+    position: relative;
+    border: solid black 1px;
+    background-color: rgb(205, 242, 205);
+  }
+
+  img {
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    offset-path: path('M 50 80 C 150 -20 250 180 350 80');
+    offset-distance: 33%;
+  }
+
+  svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+</style>
+</head>
+<body>
+
+<h1>The offset-distance property</h1>
+
+<div id="frameDiv">
+  <img id="fish1" src="img_fish.svg" alt="fish">
+  <svg fill="none" stroke="gray" stroke-width="2" stroke-dasharray="5,5">
+    <path d="M 50 80 C 150 -20 250 180 350 80" />
+  </svg>
+</div>
+
+<p>The fish is placed on its defined path, at a distance 33% from the start of the path.</p>
+
+</body>
+</html>

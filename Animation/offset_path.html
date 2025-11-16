@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #frameDiv {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    border: solid black 1px;
+    background-color: rgb(205, 242, 205);
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #frameDiv > div {
+    width: 50px;
+    height: 20px;
+    border-radius: 3px 10px 10px 3px;
+    background-color: hotpink;
+    offset-path: path('M20,170 L100,20 L180,100 Z');
+    animation: moveDiv 3s 3;
+  }
+
+  @keyframes moveDiv {
+    100%  { offset-distance: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Animation along an offset-path</h1>
+
+<div id="frameDiv">
+  <span>200x200px</span>
+  <div></div>
+</div>
+
+<p>The pink div is animated to follow a path written in SVG syntax.</p>
+<p><code>offset-path: path('M20,170 L100,20 L180,100 Z');</code> creates a path that starts in position x,y=20,170 then creates a line to position 100,20 and then a line to 180,100 and then a line back to start.</p>
+<ul>
+  <li>'M' = moveto</li>
+  <li>'L' = lineto</li>
+  <li>'Z' = closepath</li>
+</ul>
+<p>For more info on how to draw an SVG path visit <a href="https://www.w3schools.com/graphics/svg_path.asp" target="_blank">SVG Tutorial -> SVG Path</a></p>
+
+</body>
+</html>
